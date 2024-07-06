@@ -18,8 +18,13 @@ PXR_NAMESPACE_OPEN_SCOPE
 /// Posts diagnostic errors for all GL errors in the current context.
 /// This macro tags the diagnostic errors with the name of the calling
 /// function.
+
+#ifdef PXR_OPENUSD_LOG_DEBUG_GL_OUTPUT
 #define HGIGL_POST_PENDING_GL_ERRORS() \
         HgiGLPostPendingGLErrors(__ARCH_PRETTY_FUNCTION__)
+#else
+#define HGIGL_POST_PENDING_GL_ERRORS()
+#endif
 
 /// Returns true if GL debug is enabled
 HGIGL_API
