@@ -205,7 +205,7 @@ HdTask::_GetTaskContextData(HdTaskContext const* ctx,
 
     HdTaskContext::const_iterator valueIt = ctx->find(id);
     if (valueIt == ctx->cend()) {
-        TF_CODING_ERROR("Token %s missing from task context", id.GetText());
+        // TF_CODING_ERROR("Token %s missing from task context", id.GetText());
         return false;
     }
 
