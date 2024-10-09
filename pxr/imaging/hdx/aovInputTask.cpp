@@ -75,7 +75,7 @@ HdxAovInputTask::Prepare(HdTaskContext* ctx, HdRenderIndex *renderIndex)
     // Wrap one HdEngine::Execute frame with Hgi StartFrame and EndFrame.
     // EndFrame is currently called in the PresentTask.
     // This is important for Hgi garbage collection to run.
-    _GetHgi()->StartFrame();
+    // _GetHgi()->StartFrame();
 
     _aovBuffer = nullptr;
     _depthBuffer = nullptr;

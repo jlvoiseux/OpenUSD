@@ -113,7 +113,7 @@ HdxPresentTask::Execute(HdTaskContext* ctx)
     // Wrap one HdEngine::Execute frame with Hgi StartFrame and EndFrame.
     // StartFrame is currently called in the AovInputTask.
     // This is important for Hgi garbage collection to run.
-    _GetHgi()->EndFrame();
+    // _GetHgi()->EndFrame();
 }
 
 
